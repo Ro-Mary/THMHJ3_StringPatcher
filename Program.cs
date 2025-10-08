@@ -99,7 +99,7 @@ class Program {
                 replaced += ProcessType(type, map, logSb);
 
         try {
-            string outputPath = Path.Combine(Path.GetDirectoryName(mappingCsv), Path.GetFileName(inputPath));
+            string outputPath = Path.Combine(Path.GetDirectoryName(mappingCsv), "publish/", Path.GetFileName(inputPath));
 
             assembly.Write(outputPath);
 
@@ -180,3 +180,4 @@ class Program {
         return replaced;
     }
 }
+
