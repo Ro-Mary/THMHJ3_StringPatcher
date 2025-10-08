@@ -5,17 +5,27 @@
 
 ## Release 다운로드 시 사용 방법
 1. 동방막화제 영야편 로컬 폴더에 압축 해제
+
 📦 Content
+
 📦 Replay
+
 📦 THMHJ3_StringPatcher
+
  ┣ 📄 mapping.csv
+
  ┣ 📄 THMHJ3_StringPatcher.exe
+ 
  ┣ 📄 Mono.Cecil.dll
+ 
  ┣ 📄 Mono.Cecil.Mdb.dll
+ 
  ┣ 📄 THMHJ3_StringPatcher.dll
+ 
  ...
 
 위와 같은 구조가 되어야 합니다.
+
 2. THMHJ3_StringPatcher.exe 실행
 
 ## 직접 빌드 시 사용 방법
@@ -27,4 +37,5 @@
 ## 파일 설명
 - **Program.cs**: 메인 코드
 - **mapping.csv**: 원문과 번역문이 들어 있는 CSV
+
 - **Run.bat**: 빌드 및 실행 자동화 스크립트
