@@ -29,10 +29,6 @@ class Program {
         var exeDir = Path.GetDirectoryName(exePath);
         if (exeDir == null) exeDir = Directory.GetCurrentDirectory();
 
-        //var inputPath = Path.Combine(exeDir, "../THMHJ.exe");
-        //var mappingCsv = Path.Combine(exeDir, "mapping.csv");
-        //var outputPath = Path.Combine(exeDir, "THMHJ.exe");
-
         string? inputPath = FindFileUpwards(exeDir, "THMHJ.exe");
         if (inputPath == null) {
             Console.WriteLine("THMHJ.exe를 찾을 수 없습니다.");
@@ -109,11 +105,13 @@ class Program {
 
             File.WriteAllText(Path.Combine(exeDir, "patch_log.txt"), logSb.ToString(), Encoding.UTF8);
             Console.WriteLine("수정 로그: patch_log.txt");
+            Console.WriteLine("작업 성공. 폴더에 생성된 THMHJ.exe파일을 복사 후, 본 게임 폴더에 덮어쓰기 해 주세요.");
         }
         catch (Exception ex) {
             Console.WriteLine("패치 파일 생성 실패: " + ex.Message);
             logSb.AppendLine("쓰기 실패: " + ex.Message);
             File.WriteAllText(Path.Combine(exeDir, "patch_log.txt"), logSb.ToString(), Encoding.UTF8);
+            Console.WriteLine("이 폴더에 THMHJ.exe파일이 있다면, 삭제 후 재실행 해주세요.");
             WaitExit();
             return 6;
         }
@@ -122,8 +120,8 @@ class Program {
     }
 
     static void WaitExit() {
-        Console.WriteLine("\nPress Enter to exit...");
-        Console.ReadLine();
+        Console.WriteLine("\n아무 키나 눌러 프로그램을 종료하기.");
+        Console.ReadKey();
     }
 
     static List<MappingEntry> LoadMapping(string csvPath) {
