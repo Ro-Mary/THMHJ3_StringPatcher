@@ -2,8 +2,8 @@ name: Build and Release THMHJ3 String Patcher
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*'
 
 permissions:
   contents: write
@@ -27,8 +27,14 @@ jobs:
       - name: Publish (self-contained single-file exe)
         run: dotnet publish THMHJ3_StringPatcher.csproj -c Release -r win-x64 -p:PublishSingleFile=true --self-contained true -o publish
 
-      - name: Upload publish folder as artifact
-        uses: actions/upload-artifact@v4
+      - name: Create GitHub Release & Upload files
+        uses: softprops/action-gh-release@v2
         with:
-          name: THMHJ3_StringPatcher-publish
-          path: publish/**
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          files: |
+            publish/**
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
