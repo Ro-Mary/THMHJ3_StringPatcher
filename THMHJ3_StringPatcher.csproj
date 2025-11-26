@@ -10,7 +10,6 @@
 
   <PropertyGroup>
     <ApplicationIcon>icon.ico</ApplicationIcon>
-    <Win32Resource>icon.ico</Win32Resource>
   </PropertyGroup>
   
   <ItemGroup>
@@ -29,5 +28,6 @@
   </ItemGroup>
 
 </Project>
+
 
 
