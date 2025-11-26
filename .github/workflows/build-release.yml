@@ -25,7 +25,7 @@ jobs:
         run: dotnet restore THMHJ3_StringPatcher.csproj
 
       - name: Publish (self-contained single-file exe)
-        run: dotnet publish THMHJ3_StringPatcher.csproj -c Release -r win-x64 --self-contained true -o publish
+        run: dotnet publish THMHJ3_StringPatcher.csproj -c Release -r win-x64 -p:PublishSingleFile=true --self-contained true -o publish
 
       - name: Upload publish folder as artifact
         uses: actions/upload-artifact@v4
