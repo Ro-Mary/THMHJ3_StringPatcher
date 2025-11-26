@@ -2,8 +2,8 @@ name: Build and Release THMHJ3 String Patcher
 
 on:
   push:
-    tags:
-      - 'v*' 
+    branches:
+      - main
 
 permissions:
   contents: write
