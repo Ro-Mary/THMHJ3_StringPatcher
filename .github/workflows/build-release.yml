@@ -25,16 +25,10 @@ jobs:
         run: dotnet restore THMHJ3_StringPatcher.csproj
 
       - name: Publish (self-contained single-file exe)
-        run: dotnet publish THMHJ3_StringPatcher.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o publish
+        run: dotnet publish THMHJ3_StringPatcher.csproj -c Release -r win-x64 --self-contained true -o publish
 
-      - name: Create GitHub Release & Upload EXE
-        uses: softprops/action-gh-release@v2
+      - name: Upload publish folder as artifact
+        uses: actions/upload-artifact@v4
         with:
-          tag_name: ${{ github.ref_name }}                  
-          name: ${{ github.ref_name }} 
-          draft: false
-          prerelease: false
-          files: |
-            publish/*.exe                                   
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: THMHJ3_StringPatcher-publish
+          path: publish/**
