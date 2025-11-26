@@ -4,7 +4,7 @@
 
 ## 사용 방법
 1. 동방막화제 영야편 로컬 폴더내에 압축 해제<br/>
-2. publish 폴더 내부의 THMHJ3_StringPatcher.exe 실행<br/>
+2. 폴더 내부의 THMHJ3_StringPatcher.exe 실행<br/>
 
 📦 Content<br/>
 📦 Replay<br/>
@@ -16,3 +16,4 @@
 3. 폴더 내에 생성된 THMHJ.exe 파일을 원본 게임 폴더에 붙여넣기(덮어쓰기)<br/>
 
 작업이 완료되면 backup폴더 안에 기존 exe파일을 백업으로 저장합니다.
+
