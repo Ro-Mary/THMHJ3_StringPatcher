@@ -9,12 +9,12 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <ApplicationIcon>Icon.ico</ApplicationIcon>
-    <Win32Resource>Icon.ico</Win32Resource>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <Win32Resource>icon.ico</Win32Resource>
   </PropertyGroup>
   
   <ItemGroup>
-    <Content Include="Icon.ico" />
+    <Content Include="icon.ico"/>
   </ItemGroup>
 
   <ItemGroup>
@@ -29,4 +29,5 @@
   </ItemGroup>
 
 </Project>
+
 
