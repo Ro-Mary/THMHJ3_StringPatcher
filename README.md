@@ -2,7 +2,7 @@
 
 동방막화제 영야편의 exe파일 내 텍스트를 CSV 매핑 파일을 통해 수정하는 간단한 C# 기반 문자열 패처입니다.<br/>
 
-## 한글 패치 방법 *(v1.02-1)*
+## 한글 패치 방법 *(v1.02 라스트워드 업데이트)*
 ### Content파일 패치
 1. 아래의 링크에서 zip파일을 다운로드 합니다.<br/>
 https://drive.google.com/file/d/1hCzFr4dcViUaxyFnY6blWD2C5tmCvorL/view?usp=sharing<br/>
@@ -24,5 +24,6 @@ https://drive.google.com/file/d/1hCzFr4dcViUaxyFnY6blWD2C5tmCvorL/view?usp=shari
 4. 폴더 내에 생성된 THMHJ.exe 파일을 로컬 게임 폴더에 붙여넣기(덮어쓰기)합니다.<br/>
 
 #### 문제가 생길 경우, 파일 무결성 검사를 통해 원상태로 되돌릴 수 있습니다.
+
 
 
